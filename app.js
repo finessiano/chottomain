@@ -240,7 +240,7 @@ mmEnable.onclick = async () => {
   await ethereum.request({ method: 'eth_requestAccounts'});
 
 	const activeAddress = ethereum.selectedAddress;
-	const activeAddressFirstFour = activeAddress.substring(0,4);
+	const activeAddressFirstFour = activeAddress.substring(0,5);
 	const activeAddressLastFour = activeAddress.substring(38,42);
 	mmEnable.innerHTML = activeAddressFirstFour + "..." + activeAddressLastFour;
 

@@ -206,7 +206,7 @@ window.addEventListener("load", async () => {
 	const displayAddress = document.getElementById('mm-connect');
 
 	const activeAddress = ethereum.selectedAddress ;
-	const activeAddressFirstFour = activeAddress.substring(0,4);
+	const activeAddressFirstFour = activeAddress.substring(0,5);
 	const activeAddressLastFour = activeAddress.substring(38,42);
 	displayAddress.innerHTML = activeAddressFirstFour + "..." + activeAddressLastFour;
 

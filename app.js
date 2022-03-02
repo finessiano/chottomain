@@ -218,6 +218,27 @@ window.addEventListener("load", async () => {
 	  if (nftBalance > 0) {
 	  document.getElementById("landing-page-container2").style.display = "none";
 	  document.getElementById("landing-page-state2").style.display = "inherit";
+	  var reward1remaining = await rewardProgramContract.methods.remainingRaceTicket().call();
+	    var reward2remaining = await rewardProgramContract.methods.remainingVinyardTour().call();
+	    var reward3remaining = await rewardProgramContract.methods.remainingRolex().call();
+	    if (reward1remaining == 0) {
+	       document.getElementById("redeem-reward1").style.color = "var(--dl-color-gray-500)";
+	       document.getElementById("redeem-reward1").style.borderColor = "var(--dl-color-gray-500)";
+	       document.getElementById("redeem-reward1").disabled = true;
+	       document.getElementById("redeem-reward1").style.pointerEvents = "none";     
+	    }
+	    if (reward2remaining == 0) {
+	       document.getElementById("redeem-reward2").style.color = "var(--dl-color-gray-500)";
+	       document.getElementById("redeem-reward2").style.borderColor = "var(--dl-color-gray-500)";
+	       document.getElementById("redeem-reward2").disabled = true;
+	       document.getElementById("redeem-reward2").style.pointerEvents = "none";     
+	    }
+	    if (reward3remaining == 0) {
+	       document.getElementById("redeem-reward3").style.color = "var(--dl-color-gray-500)";
+	       document.getElementById("redeem-reward3").style.borderColor = "var(--dl-color-gray-500)";
+	       document.getElementById("redeem-reward3").disabled = true;
+	       document.getElementById("redeem-reward3").style.pointerEvents = "none";     
+	    }    
 	  }
 
 	  else {
@@ -254,6 +275,27 @@ mmEnable.onclick = async () => {
   if (nftBalance > 0) {
   document.getElementById("landing-page-container2").style.display = "none";
   document.getElementById("landing-page-state2").style.display = "inherit";
+  var reward1remaining = await rewardProgramContract.methods.remainingRaceTicket().call();
+    var reward2remaining = await rewardProgramContract.methods.remainingVinyardTour().call();
+    var reward3remaining = await rewardProgramContract.methods.remainingRolex().call();
+    if (reward1remaining == 0) {
+       document.getElementById("redeem-reward1").style.color = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward1").style.borderColor = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward1").disabled = true;
+       document.getElementById("redeem-reward1").style.pointerEvents = "none";     
+    }
+    if (reward2remaining == 0) {
+       document.getElementById("redeem-reward2").style.color = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward2").style.borderColor = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward2").disabled = true;
+       document.getElementById("redeem-reward2").style.pointerEvents = "none";     
+    }
+    if (reward3remaining == 0) {
+       document.getElementById("redeem-reward3").style.color = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward3").style.borderColor = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward3").disabled = true;
+       document.getElementById("redeem-reward3").style.pointerEvents = "none";     
+    }    
   window.location.reload();
   }
 

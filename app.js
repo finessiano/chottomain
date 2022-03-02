@@ -320,6 +320,7 @@ mmEnable.onclick = async () => {
        document.getElementById("redeem-reward1").disabled = true;
        document.getElementById("redeem-reward1").style.pointerEvents = "none";     
   }
+  }
 
   const redeem2 = document.getElementById('redeem-reward2');
   redeem2.onclick = async () => {
@@ -334,7 +335,6 @@ mmEnable.onclick = async () => {
        document.getElementById("redeem-reward2").disabled = true;
        document.getElementById("redeem-reward2").style.pointerEvents = "none";     
   }
-
   }
 
   const redeem3 = document.getElementById('redeem-reward3');
@@ -350,5 +350,4 @@ mmEnable.onclick = async () => {
        document.getElementById("redeem-reward3").disabled = true;
        document.getElementById("redeem-reward3").style.pointerEvents = "none";     
   }
-
   }

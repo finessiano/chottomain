@@ -313,6 +313,12 @@ mmEnable.onclick = async () => {
   const rewardProgramContract = new web3.eth.Contract(rewardProgramABI, rewardProgramAddress);
   rewardProgramContract.setProvider(window.ethereum);
   await rewardProgramContract.methods.redeemReward(0).send({from: ethereum.selectedAddress});
+  var reward1remaining = await rewardProgramContract.methods.remainingRaceTicket().call();
+	  if (reward1remaining == 0) {
+       document.getElementById("redeem-reward1").style.color = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward1").style.borderColor = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward1").disabled = true;
+       document.getElementById("redeem-reward1").style.pointerEvents = "none";     
   }
 
   const redeem2 = document.getElementById('redeem-reward2');
@@ -321,6 +327,14 @@ mmEnable.onclick = async () => {
   const rewardProgramContract = new web3.eth.Contract(rewardProgramABI, rewardProgramAddress);
   rewardProgramContract.setProvider(window.ethereum);
   await rewardProgramContract.methods.redeemReward(1).send({from: ethereum.selectedAddress});
+	  var reward2remaining = await rewardProgramContract.methods.remainingVinyardTour().call();
+	  if (reward2remaining == 0) {
+       document.getElementById("redeem-reward2").style.color = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward2").style.borderColor = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward2").disabled = true;
+       document.getElementById("redeem-reward2").style.pointerEvents = "none";     
+  }
+
   }
 
   const redeem3 = document.getElementById('redeem-reward3');
@@ -329,4 +343,12 @@ mmEnable.onclick = async () => {
   const rewardProgramContract = new web3.eth.Contract(rewardProgramABI, rewardProgramAddress);
   rewardProgramContract.setProvider(window.ethereum);
   await rewardProgramContract.methods.redeemReward(2).send({from: ethereum.selectedAddress});
+	  var reward3remaining = await rewardProgramContract.methods.remainingRolex().call();
+	  if (reward3remaining == 0) {
+       document.getElementById("redeem-reward3").style.color = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward3").style.borderColor = "var(--dl-color-gray-500)";
+       document.getElementById("redeem-reward3").disabled = true;
+       document.getElementById("redeem-reward3").style.pointerEvents = "none";     
+  }
+
   }

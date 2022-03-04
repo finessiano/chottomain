@@ -1,5 +1,5 @@
 // contract address on Kovan:
-const rewardProgramAddress = '0xBbE7439a34F2c655a358e7B12115BF830185095a'
+const rewardProgramAddress = '0x66760947Db6d9121aCe21840e388cEdca550120e'
 
 // add contract ABI:
 const rewardProgramABI =

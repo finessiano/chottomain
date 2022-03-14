@@ -258,6 +258,7 @@ window.ethereum.on('accountsChanged', function () {
 const mmEnable = document.getElementById('mm-connect');
 
 mmEnable.onclick = async () => {
+  await ethereum.enable();
   await ethereum.request({ method: 'eth_requestAccounts'});
 
 	const activeAddress = ethereum.selectedAddress;
